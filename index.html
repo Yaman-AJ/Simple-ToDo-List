@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List with Local Storage</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.1);
+        width: 450px;
+      }
+
+      .form {
+        display: flex;
+        margin-bottom: 20px;
+      }
+
+      .input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .add,
+      .clear {
+        padding: 10px 20px;
+        border: none;
+        background-color: #28a745;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-left: 10px;
+      }
+
+      .clear {
+        background-color: #dc3545;
+      }
+
+      .tasks {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .task {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .task.completed {
+        text-decoration: line-through;
+        opacity: 0.6;
+      }
+
+      .delete {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <input type="text" class="input" placeholder="Add a new task" />
+        <button class="add">Add Task</button>
+        <button class="clear">Clear All</button>
+      </div>
+      <ul class="tasks"></ul>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
